@@ -72,7 +72,7 @@ class RobotMonitorWidget(QWidget):
 
         super(RobotMonitorWidget, self).__init__()
         rp = rospkg.RosPack()
-        ui_file = os.path.join(rp.get_path('rqt_robot_monitor'), 'resource',
+        ui_file = os.path.join(rp.get_path('rqt_robot_supervisor_monitor'),'src', 'resource',
                                'robotmonitor_mainwidget.ui')
         loadUi(ui_file, self)
 

@@ -1,5 +1,5 @@
 <package>
-  <name>rqt_robot_monitor</name>
+  <name>rqt_robot_supervisor_monitor</name>
   <version>0.5.8</version>
   <description>rqt_robot_monitor displays diagnostics_agg topics messages that
    are published by <a href = "http://www.ros.org/wiki/diagnostic_aggregator">diagnostic_aggregator</a>.

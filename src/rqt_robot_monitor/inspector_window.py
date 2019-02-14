@@ -81,7 +81,7 @@ class InspectorWindow(QWidget):
 
             # Added addtional button for change logger level - Tina Van
             self.logger_level_option = QPushButton("Change Logger Level")
-            self.logger_level_option.clicked.connect(self._open_logger_level_option_pane())
+            self.logger_level_option.clicked.connect(self._open_logger_level_option_pane)
             self.layout_vertical.addWidget(self.logger_level_option)
 
         self.snaps = []
@@ -104,6 +104,8 @@ class InspectorWindow(QWidget):
             snap.close()
         self.closed.emit(self._name)
 
+        self.option_panel.close()
+
     @Slot(DiagnosticArray)
     def message_updated(self, msg):
         status = util.get_status_by_name(msg, self._name)
@@ -123,4 +125,4 @@ class InspectorWindow(QWidget):
         self.snaps.append(snap)
 
     def _open_logger_level_option_pane(self):
-        SupervisorLoggerLevelOptionPane(self, self.name, self.status)
+        self.option_panel = SupervisorLoggerLevelOptionPane(self._name, self.status, parent=self)

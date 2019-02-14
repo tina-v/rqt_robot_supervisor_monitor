@@ -1,5 +1,5 @@
 <library path="src">
-  <class name="RobotMonitor" type="rqt_robot_monitor.robot_monitor_plugin.RobotMonitorPlugin" base_class_type="rqt_gui_py::Plugin">
+  <class name="RobotSupervisorMonitor" type="rqt_robot_supervisor_monitor.robot_monitor_plugin.RobotMonitorPlugin" base_class_type="rqt_gui_py::Plugin">
     <description>
     Display for /diagnostics_agg
     </description>
